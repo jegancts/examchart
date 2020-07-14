@@ -16,19 +16,22 @@ export class ChartsComponent implements OnInit {
   ngOnInit() {
 
     let chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light2",
+      culture: "es",
+      backgroundColor: "#fff",
       animationEnabled: true,
-      exportEnabled: true,
+     
       title: {
         text: "Current Quarter Attendance"
       },
       data: [{
         type: "column",
         dataPoints: [
-          { y: 71, label: "English" },
-          { y: 90, label: "Maths" },
-          { y: 100, label: "Chemistry" },
-          { y: 89, label: "Physics" },
-          { y: 95, label: "Advanced English" }
+          { y: 71, label: " English Exam " },
+          { y: 90, label: "Maths Exam" },
+          { y: 100, label: "Chemistry Exam" },
+          { y: 89, label: "Physics Exam" },
+          { y: 95, label: "Advanced  English Exam " }
       
         ]
       }]
@@ -41,7 +44,8 @@ export class ChartsComponent implements OnInit {
     let chart1 = new CanvasJS.Chart("chartContainer1", {
       theme: "light2",
       animationEnabled: true,
-      exportEnabled: true,
+      backgroundColor: "#fff",
+      
       title:{
         text: "Pass Fail Rate"
       },
@@ -50,9 +54,10 @@ export class ChartsComponent implements OnInit {
         showInLegend: true,
         toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
         indexLabel: "{name} - #percent%",
+      
         dataPoints: [
           { y: 90, name: "Pass Rate" },
-          { y: 10, name: "Faile Rate" }
+          { y: 10, name: "Fail Rate" }
     
         ]
       }]
@@ -63,10 +68,12 @@ export class ChartsComponent implements OnInit {
 /* next char start here */
 
     var chart2 = new CanvasJS.Chart("chartContainer2", {
+      theme: "light2",
       animationEnabled: true,
+      backgroundColor: "#fff",
       title:{
-        text: "Exam Qualified %",
-        horizontalAlign: "left"
+        text: "Exam Qualified %"
+        
       },
       data: [{
         type: "doughnut",
@@ -76,10 +83,10 @@ export class ChartsComponent implements OnInit {
         indexLabel: "{label} - #percent%",
         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
         dataPoints: [
-          { y: 78, label: "Maths" },
-          { y: 90, label: "Physics" },
-          { y: 98, label: "Chemistry" },
-          { y: 69, label: "English"},
+          { y: 78, label: "Maths Exam" },
+          { y: 90, label: "Physics Exam" },
+          { y: 98, label: "Chemistry Exam" },
+          { y: 69, label: " English Exam "},
       
         ]
       }]
@@ -89,7 +96,8 @@ export class ChartsComponent implements OnInit {
 /* next char start here */
 var chart3 = new CanvasJS.Chart("chartContainer3", {
 	animationEnabled: true,
-	theme: "light2",
+  theme: "light2",
+  backgroundColor: "#fff",
 	title:{
 		text: "Weekly Performance"
 	},
@@ -122,7 +130,7 @@ var chart3 = new CanvasJS.Chart("chartContainer3", {
 		name: "Total Test Takers",
 		markerType: "square",
 		xValueFormatString: "DD MMM, YYYY",
-		color: "#F08080",
+		color: "green",
 		dataPoints: [
 			{ x: new Date(2017, 0, 3), y: 650 },
 			{ x: new Date(2017, 0, 4), y: 700 },
